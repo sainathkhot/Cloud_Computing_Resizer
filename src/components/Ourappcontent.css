@@ -1,0 +1,59 @@
+/* .startcard {
+    margin-top: 100px;
+    justify-content: left;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    width: 85%;
+    background: linear-gradient(90deg, rgba(19,7,46,0.8) 0%, rgba(63,33,130,0.8) 35%);
+    border-radius: 25px;
+  }
+
+  .content{
+    margin-top: -70px;
+    flex: 1;
+    padding: 0px;
+ 
+    text-align: center;
+    padding: 27px;
+    font-size: 1.4rem;
+    width: 110%; 
+ 
+    margin-bottom: 15px;
+} */
+
+
+.startcardapp {
+  margin-top: 70px;
+  margin-left: 50px;
+  margin-right: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 550px;
+  width: 50%%;
+  /* background: linear-gradient(90deg, rgba(19,7,46,1) 0%, rgba(63,33,130,1) 35%); */
+  background: linear-gradient(90deg, rgba(19,7,46,0.8) 0%, rgba(63,33,130,0.8) 35%);
+  border-radius: 25px;
+}
+
+.contentapp {
+  text-align: left; /* Aligns text left */
+  padding: 20px;
+  width: 100%; /* Ensures the content takes full width */
+}
+
+.contentapp h1 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.contentapp p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+  
