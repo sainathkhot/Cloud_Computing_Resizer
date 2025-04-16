@@ -29,7 +29,7 @@
   margin-left: 50px;
   margin-right: 50px;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   display: flex;
   flex-direction: column;
   height: 550px;
@@ -41,19 +41,116 @@
 
 .contentapp {
   text-align: left; /* Aligns text left */
+  justify-content: right;
+  align-items: right;
   padding: 20px;
-  width: 100%; /* Ensures the content takes full width */
+  width: 52%; /* Ensures the content takes full width */
+  position: absolute;
+  margin-right: 55px;
+  right: 0;
 }
 
 .contentapp h1 {
   margin-bottom: 15px;
-  font-size: 2rem;
+  font-size: 3rem;
+  animation: fadeindown 2s ease;
 }
 
 .contentapp p {
   margin-top: 10px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.5;
+  text-align: left;
+  word-spacing: 2px;
+  animation: fadeinup 2s ease;
 }
 
-  
+.image{
+width: 40%;
+margin-top: 27px;
+border-radius: 25px;
+position: relative;
+top: 5px;
+right: 60%;
+animation: fadeinleft 2s ease;
+}
+
+
+@keyframes fadeinup {
+  0%{
+    opacity: 0;
+    transform: translateY(52px);
+  }
+  100%{
+    opacity:1;
+    transform: translateY(0px);
+  }
+}
+
+
+@keyframes fadeinleft {
+  0%{
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeindown {
+  0%{
+    opacity: 0;
+    transform: translateY(-52px);
+  }
+  100%{
+    opacity:1;
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 720px) {
+  .startcardapp {
+    width: 100%; /* Full width for small screens */
+    height: auto; /* Let content determine height */
+    padding: 0; /* Remove padding */
+    background: none; /* Remove background */
+    border-radius: 0; /* Remove border-radius */
+  }
+
+  .contentapp {
+    width: 100%; /* Full width for small screens */
+    padding: 20px; /* Add padding */
+  }
+
+  .image {
+    display: none; /* Hide original image */
+  }
+
+  /* Add background image and adjust properties */
+  .startcardapp::before {
+    content: "";
+    background-image: url('../assets/Designer (1).png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 20%; /* Adjust downward */
+    left: 5%;
+    width: 100%;
+    height: 150%;
+    z-index: -1; /* Send behind other content */
+    opacity: 0.5; /* Adjust opacity */
+    border-radius: 25px; /* Add border-radius if needed */
+  }
+
+  /* Adjust text alignment and position */
+  .contentapp {
+    text-align: left; /* Align text to the left */
+    position: static;
+    padding-top: 50px; /* Adjust spacing from the top */
+    padding-left: 20px; /* Adjust spacing from the left */
+    
+  }
+
+}

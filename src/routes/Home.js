@@ -4,6 +4,7 @@ import Homecontent from '../components/Homecontent';
 
 const Home = () => {
   return (
+      
     <div>
       <Navbar />
       <Homecontent />
