@@ -32,7 +32,7 @@ const Resizecontent = () => {
       formData.append('downscale', downscale ? 'true' : 'false'); // Add downscale option
       setLoad(true)
       try {
-          const response = await axios.post('http://localhost:5000/resize', formData, {
+          const response = await axios.post('https://resizer-backend.onrender.com', formData, {
               headers: {
                   'Content-Type': 'multipart/form-data',
                   'Access-Control-Allow-Origin': '*'
