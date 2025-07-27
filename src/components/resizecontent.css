@@ -234,48 +234,77 @@
 
 
   
-@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+@media (max-width: 768px) {
   .resizecard {
-    flex-direction: column; /* Change to column layout on smaller screens */
-    height: auto; /* Allow height to adjust based on content */
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    padding: 30px 20px;
+    align-items: center;
+  }
+
+  .resizecard .showfile {
+    width: 100%;
+    margin: 0 0 30px 0;
+    justify-content: center;
   }
 
   .resizecard .input {
-    padding-left: 10px; /* Adjusted padding for input section */
+    width: 100%;
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
   }
 
-  .resizecard .showfile,
-  .resizecard .input {
-    width: 100%; /* Full width for both elements */
+  .fileinput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .fileinputbox{ 
-    margin-left: -8px;
-    width: 200px;
+  .fileinputbox {
+    width: 90%;
+    padding: 10px 20px;
+    margin-left: 0;
   }
 
-  .resize{
-    width: 150px;
-    margin-left: 19px;
-    margin-bottom: 8px;
+  .percentageinputbox {
+    width: 90%;
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .scallingtoggle {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .scallingswitchbox {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
   .upscale,
   .downscale {
-    width: auto; /* Adjust width to fit content */
-    font-size: 14px; /* Reduce font size */
-    padding: 5px 10px; /* Adjust padding for smaller buttons */
-    margin-left: -10px;
+    width: 90%;
+    margin: 0;
+    font-size: 14px;
+    padding: 8px 12px;
   }
 
-  .percentageinputbox {
-      padding: 8px;
-      
-  }
-  
-  .image{
-    width: 50%;
+  .resize {
+    width: 90%;
+    font-size: 20px;
+    margin: 25px auto 0 auto;
   }
 
+  .image {
+    width: 100%;
+  }
 
+  .loading-dots {
+    font-size: 20px;
+  }
 }

@@ -140,7 +140,7 @@
   .startcard {
     background-image: url('../assets/cam.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center;;
   }
 }
 
