@@ -126,35 +126,70 @@
   transition: 0.3s;
 }
 
-@media (max-width: 767px) {
+
+
+@media (max-width: 768px) {
+  .startcard {
+    flex-direction: column;
+    padding: 30px 15px;
+    position: relative;
+    overflow: hidden;
+
+    /* Background Image + Gradient Overlay */
+    background: linear-gradient(rgba(19, 7, 46, 0.85), rgba(63, 33, 130, 0.85)),
+      url('../assets/cam.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+
   .left,
   .right {
     text-align: center;
-    position: static;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
   }
 
-  .img {
-    display: none;
-  }
-
-  .startcard {
-    background-image: url('../assets/cam.jpg');
-    background-size: cover;
-    background-position: center;;
-  }
-}
-
-@media (max-width: 767px) {
   .left .content {
     width: 100%;
     padding: 10px;
     text-align: center;
+    color: white;
   }
 
   .left .content h1,
   .left .content p {
     display: block;
     text-align: center;
+  }
+
+  .img {
+    display: none; /* Hide separate img tag */
+  }
+
+  .btn {
+    width: 80%;
+    max-width: 250px;
+    height: 60px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    z-index: 2;
+    position: relative;
+  }
+
+  .topbtn {
+    width: auto;
+    font-size: 1rem;
+  }
+
+  /* Optional: Add blur effect over the image background */
+  .startcard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    filter: blur(0.3px);
+    z-index: 1;
   }
 }
 
